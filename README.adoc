@@ -1,0 +1,20 @@
+= Codename One MP3 Encoder
+
+This library adds support for MP3 audio recording in the simulator.  This only affects the simulator/JavaSE port of https://www.codenameone.com[Codename One].
+
+== Installation
+
+Install the "CN1MP3Encoder" cn1lib via Codename One settings.
+
+== Usage
+
+The presence of this library affect the following two APIs in `com.codename1.media.MediaManager`:
+
+1. `getAvailableRecordingMimeTypes()` - This should now include "audio/mp3" as one of the supported recording mimetypes.
+2. `createMediaRecorder()` - This will now accept "audio/mp3" as the mimetype, and will encode the audio in MP3 format.
+
+== Credits
+
+* Created by https://sjhannah.com[Steve Hannah]
+* Uses https://github.com/nwaldispuehl/java-lame[java-lame library] for MP3 encoding.
+
